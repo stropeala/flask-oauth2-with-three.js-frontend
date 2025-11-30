@@ -1,8 +1,11 @@
 import sqlite3
-from datetime import datetime
-
 import click
-from flask import current_app, g
+
+from flask import(
+    current_app,
+    g
+)
+
 from flask.cli import with_appcontext
 
 def get_db():
