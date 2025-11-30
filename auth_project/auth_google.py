@@ -8,13 +8,11 @@ from flask import(
     request,
     url_for
 )
-
 from flask_login import(
     login_required,
     login_user,
     logout_user
 )
-
 from oauthlib.oauth2 import WebApplicationClient
 import requests
 
@@ -24,7 +22,6 @@ from .config import(
     GOOGLE_CLIENT_SECRET,
     GOOGLE_DISCOVERY_URL
 )
-
 from .user import User
 from . import client
 
