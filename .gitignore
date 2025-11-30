@@ -210,3 +210,4 @@ __pychace__/
 .idea/
 .stuff/
 .zed/
+sqlite_db
