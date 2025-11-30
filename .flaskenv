@@ -1,0 +1,2 @@
+FLASK_APP=auth_project
+FLASK_DEBUG=1
