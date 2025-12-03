@@ -1,1 +1,1 @@
-# flask_auth_google_apple
+# flask-oauth2-with-three.js-frontend
