@@ -1,14 +1,11 @@
-# Python standard libraries
-import sqlite3
 import os
+import sqlite3
 
-# Third-party libs
+from dotenv import load_dotenv
 from flask import Flask
 from flask_login import LoginManager
 from oauthlib.oauth2 import WebApplicationClient
-from dotenv import load_dotenv
 
-# Internal imports
 from .config import GOOGLE_CLIENT_ID
 from .db import init_db
 from .user import User
@@ -19,6 +16,7 @@ insecure = os.getenv("OAUTHLIB_INSECURE_TRANSPORT")
 
 # OAuth2 client setup
 client = WebApplicationClient(GOOGLE_CLIENT_ID)
+
 
 # Flask app setup
 def create_app():
@@ -43,9 +41,11 @@ def create_app():
 
     # Register blueprints
     from .auth_google import auth_google as auth_google_blueprint
+
     app.register_blueprint(auth_google_blueprint)
 
     from .main import main as main_blueprint
+
     app.register_blueprint(main_blueprint)
 
     return app
